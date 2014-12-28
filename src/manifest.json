@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name" : "XKCD Assist",
+  "version" : "1.0.1",
+  "description" : "",
+  "homepage_url": "http://test.com",
+  "content_scripts": [{
+    "matches": ["http://xkcd.com/*"],
+    "js": [
+      "js/xkcd-assist.js",
+      "js/jquery.js"
+    ]
+  }],
+  "permissions" : [
+    "storage",
+    "http://xkcd.com/*"
+  ],
+  "minimum_chrome_version" : "6.0.0.0",
+  "icons" : {
+    "16" : "img/icon-16x16.png",
+    "48" : "img/icon-48x48.png",
+    "128" : "img/icon-128x128.png"
+  }
+}
