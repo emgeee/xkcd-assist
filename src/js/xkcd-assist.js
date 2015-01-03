@@ -42,6 +42,15 @@ function init(id, status) {
     })
     .insertAfter($('#ctitle'));
 
+
+  // display image text after the comic
+  var image = $('#comic').find('img');
+  var subtext = image[0].title;
+
+  image.after($('<p>'+subtext+'</p>'));
+
+  location.href = '#ctitle';
+
 }
 
 var id = getComicId();
@@ -49,5 +58,3 @@ chrome.storage.sync.get(id, init.bind(null, id));
 
 
 // chrome.storage.sync.clear();
-
-
